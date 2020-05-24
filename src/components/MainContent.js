@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Typography, Layout } from 'antd'
+import { Row, Col, Typography, Layout, Divider } from 'antd'
 import content from '../content-img.png'
 
 
@@ -32,33 +32,25 @@ export default function MainContent() {
             </Col>
           </Row>
           <Row>
-            <Col span={7}>
+            <Col xs={24} lg={7}>
               <Text strong={true}>Lorem ipsum dolor sit amet</Text>
             </Col>
             <Col span={17}>
               <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque libero illum voluptatibus modi. Quam ex necessitatibus magnam similique ab. Est dolores blanditiis nostrum voluptatibus sint earum in, aspernatur explicabo.</Text>
             </Col>
           </Row>
+          <Divider/>
           <Row>
-            <Col span={24}>
-              <Text strong={true} style={{ fontSize: '10px' }}>12 May 2020</Text>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={7}>
+            <Col xs={24} lg={7}>
               <Text strong={true}>Lorem ipsum dolor</Text>
             </Col>
             <Col span={17}>
               <Text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda dolorum explicabo vitae minima, doloribus architecto consequatur ratione nobis eum cum.</Text>
             </Col>
           </Row>
+          <Divider/>
           <Row>
-            <Col span={24}>
-              <Text strong={true} style={{ fontSize: '10px' }}>12 May 2020</Text>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={7}>
+            <Col xs={24} lg={7}>
               <Text strong={true}>Lorem ipsum</Text>
             </Col>
             <Col span={17}>
