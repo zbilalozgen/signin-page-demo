@@ -1,6 +1,7 @@
 import React from 'react';
-import {Button, Col, Form, Input, Row} from "antd";
+import {Button, Col, Form, Input, Row, Modal} from "antd";
 import {LockOutlined, MailOutlined} from "@ant-design/icons";
+import {connect} from "react-redux";
 
 //Form layout
 const formItemLayout = {
@@ -10,10 +11,20 @@ const buttonLayout = {
   wrapperCol: { span: 24 }
 }
 
-function LoginInputs(props) {
+function LoginInputs({handleModal}) {
   const [form] = Form.useForm();
   const onFinish = (values) => {
-    console.log('Received values of form: ', values)
+    handleModal(false)
+    Modal.info({
+      centered: true,
+      title: 'Currently we have a scheduled maintenance',
+      content: (
+        <div>
+          <p>Thanks for interest {values.email}, please try again later.</p>
+        </div>
+      ),
+      okText: 'Close'
+    })
   }
 
   return (
@@ -65,4 +76,12 @@ function LoginInputs(props) {
   );
 }
 
-export default LoginInputs;
+function mapDispatchToProps(dispatch) {
+  return {
+    handleModal: (isOpen) => {
+      dispatch({type: "HANDLE_MODAL", payload: isOpen})
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(LoginInputs)

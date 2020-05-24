@@ -17,12 +17,12 @@ export default function MainContent() {
             <Col span={24}>
               <Title level={1}>New Features<br /> in <span style={{ fontWeight: 'bold' }}>Designer</span></Title>
             </Col>
-            <Col span={18}>
+            <Col span={22}>
               <Text className="content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat, dolores aliquid quasi dolorum facilis ullam nisi recusandae omnis distinctio.</Text>
             </Col>
           </Col>
           <Col xs={0} lg={14}>
-            <img className="content__img" src={content} />
+            <img className="content__img" alt="landing-img" src={content} />
           </Col>
         </Row>
         <div className="content__announcements">
