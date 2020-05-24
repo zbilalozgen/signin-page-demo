@@ -2,7 +2,6 @@ import React from 'react';
 import CustomHeader from '../components/CustomHeader.js'
 import MainContent from '../components/MainContent.js'
 import SideForm from '../components/SideForm.js'
-import content from '../content-img.png'
 
 //Utility
 import isMobile from "ismobilejs"
@@ -25,7 +24,6 @@ function Container() {
           <Row>
             <Col className="content" span={24}>
               <MainContent />
-              {isMobileDevice && <img className="wrapper__background" src={content}/>}
             </Col>
           </Row>
         </Col>
