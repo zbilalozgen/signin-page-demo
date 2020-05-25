@@ -41,16 +41,16 @@ function LoginInputs({handleModal}) {
         rules={[
           {
             type: 'email',
-            message: 'Please enter a valid email',
+            message: 'Please enter a valid email address',
           },
           {
             required: true,
-            message: 'Please enter your email!',
+            message: 'Please enter your email address!',
           },
         ]}
         hasFeedback={true}
       >
-        <Input prefix={<MailOutlined className="site-form-item-icon" />} placeholder="Email adress" />
+        <Input prefix={<MailOutlined className="site-form-item-icon" />} placeholder="Email Address" />
       </Form.Item>
       <Form.Item
         name="password"

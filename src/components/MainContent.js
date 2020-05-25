@@ -13,22 +13,22 @@ export default function MainContent() {
     <>
       <Content>
         <Row>
-          <Col xs={24} lg={10} className="content__heading">
-            <Col span={24}>
-              <Title level={1}>New Features<br /> in <span style={{ fontWeight: 'bold' }}>Designer</span></Title>
+          <Col xs={24} lg={24} className="content__heading">
+            <Col md={24} lg={12}>
+              <Title level={1}>New Features in <span style={{ fontWeight: 'bold' }}>Designer</span></Title>
             </Col>
-            <Col span={22}>
+            <Col md={20} lg={9}>
               <Text className="content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat, dolores aliquid quasi dolorum facilis ullam nisi recusandae omnis distinctio.</Text>
             </Col>
           </Col>
-          <Col xs={0} lg={14}>
+          <Col className="content__img__container" xs={0} lg={14}>
             <img className="content__img" alt="landing-img" src={content} />
           </Col>
         </Row>
         <div className="content__announcements">
           <Row>
             <Col span={24}>
-              <Text strong={true} style={{ fontSize: '10px' }}>12 May 2020</Text>
+              <Text strong={true} style={{ fontSize: '12px' }}>12 May 2020</Text>
             </Col>
           </Row>
           <Row>
