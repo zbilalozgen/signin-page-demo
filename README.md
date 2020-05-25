@@ -1,3 +1,14 @@
+## Demo Sign-in Page
+
+A demo landing page only with sign-in functionality. 
+
+Used technologies:
+
+React, Ant Design, Redux, Less.
+
+You can see live version:
+[http://zbilalozgen.github.io/signin-page-demo](http://zbilalozgen.github.io/signin-page-demo)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
