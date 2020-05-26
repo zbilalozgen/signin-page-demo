@@ -9,13 +9,15 @@ import { Layout, Avatar, Button, Menu } from 'antd'
 
 //Antd icons
 import { UserOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import {Dispatch} from "redux";
+import {handleModal} from "../redux/action";
 
 
 const { Header } = Layout
 const { SubMenu } = Menu
 
 //Mobile menu renderer
-const renderMobileMenu = (props) => (
+const renderMobileMenu = (props: LinkDispatchProps) => (
   <>
     <Menu className="header__mobile-menu" mode="horizontal">
       <SubMenu
@@ -50,7 +52,7 @@ const renderDesktopMenu = () => (
   </>
 )
 
-function CustomHeader(props) {
+function CustomHeader(props: LinkDispatchProps) {
   const isMobileDevice = isMobile().phone
 
   return (
@@ -60,11 +62,13 @@ function CustomHeader(props) {
     )
 }
 
-function mapDispatchToProps(dispatch) {
+interface LinkDispatchProps {
+  handleModal: (isOpen: boolean) => void
+}
+
+function mapDispatchToProps(dispatch: Dispatch) {
   return {
-    handleModal: (isOpen) => {
-    dispatch({type: "HANDLE_MODAL", payload: isOpen})
-    }
+    handleModal: (isOpen: boolean) => dispatch(handleModal(isOpen))
   }
 }
 

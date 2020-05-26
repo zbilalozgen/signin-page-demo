@@ -1,7 +1,7 @@
 import React from 'react';
-import CustomHeader from '../components/CustomHeader.js'
-import MainContent from '../components/MainContent.js'
-import SideForm from '../components/SideForm.js'
+import CustomHeader from '../components/CustomHeader'
+import MainContent from '../components/MainContent'
+import SideForm from '../components/SideForm'
 
 //Utility
 import isMobile from "ismobilejs"

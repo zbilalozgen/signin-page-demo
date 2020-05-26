@@ -2,6 +2,8 @@ import React from 'react';
 import {Button, Col, Form, Input, Row, Modal} from "antd";
 import {LockOutlined, MailOutlined} from "@ant-design/icons";
 import {connect} from "react-redux";
+import {Dispatch} from "redux";
+import {handleModal} from "../redux/action";
 
 //Form layout
 const formItemLayout = {
@@ -11,9 +13,14 @@ const buttonLayout = {
   wrapperCol: { span: 24 }
 }
 
-function LoginInputs({handleModal}) {
+interface UserInput {
+  email: string,
+  password: string
+}
+
+function LoginInputs({handleModal}: LinkDispatchProps) {
   const [form] = Form.useForm();
-  const onFinish = (values) => {
+  const onFinishHandler = (values:any) => {
     handleModal(false)
     Modal.info({
       centered: true,
@@ -34,7 +41,7 @@ function LoginInputs({handleModal}) {
       {...formItemLayout}
       layout={'horizontal'}
       form={form}
-      onFinish={onFinish}
+      onFinish={onFinishHandler}
     >
       <Form.Item
         name="email"
@@ -76,11 +83,14 @@ function LoginInputs({handleModal}) {
   );
 }
 
-function mapDispatchToProps(dispatch) {
+interface LinkDispatchProps {
+  handleModal: (isOpen: boolean) => void
+}
+
+
+function mapDispatchToProps(dispatch: Dispatch) {
   return {
-    handleModal: (isOpen) => {
-      dispatch({type: "HANDLE_MODAL", payload: isOpen})
-    }
+    handleModal: (isOpen: boolean) => dispatch(handleModal(isOpen))
   }
 }
 
