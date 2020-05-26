@@ -4,7 +4,7 @@ A demo landing page only with sign-in functionality.
 
 Used technologies:
 
-React, Ant Design, Redux, Less.
+React, Typescript, Ant Design, Redux, Less.
 
 You can see live version:
 [http://zbilalozgen.github.io/signin-page-demo](http://zbilalozgen.github.io/signin-page-demo)
